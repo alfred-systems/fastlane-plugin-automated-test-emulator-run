@@ -13,11 +13,11 @@ module Fastlane
     class AdbControllerFactory
   
         def self.get_adb_controller(params)
-          UI.message(["Preparing commands for Android ADB"].join(" ").yellow)
+          UI.message(["Preparing commands for Android ADB test"].join(" ").yellow)
 
           # Get paths
           path_sdk = "#{params[:SDK_path]}"
-          path_avdmanager_binary = path_sdk + "/tools/bin/avdmanager"
+          path_avdmanager_binary = path_sdk + "/cmdline-tools/latest/bin/avdmanager"
           path_adb = path_sdk + "/platform-tools/adb"
 
           # ADB shell command parts
